@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #18191F;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@layer utilities{
+  .select-wrap{
+    @apply px-[23px] py-[15px] bg-[#F9F9F9] border border-[#E6E6E6]
+  }
+  .house-spec{
+    @apply border-r border-r-[#E4E4E4] last:border-r-0 flex items-center justify-center gap-2.5 text-black -tracking-[0.454803px] text-lg font-bold leading-6 py-5
+  }
+  .pagination{
+    @apply py-[25px] px-4 inline-block border-x border-x-muted
+  }
+  .active-page{
+    @apply bg-orange text-white
+  }
+}
+.hero{
+  background: linear-gradient(200.44deg, rgba(0, 0, 0, 0.0001) 16.41%, rgba(0, 0, 0, 0.51) 77.16%), url(/src/assets/hero-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
