@@ -2,18 +2,17 @@ import React from 'react'
 
 function HousingCard({title, type, cost, rooms, shower, size, url}) {
     return (
-        <div className='overflow-hidden rounded-[26px] font-dm-sans bg-white border border-[#979797] hover:border-0 hover:shadow-7xl'>
-            <div className='h-[283px] w-full overflow-hidden'>
+        <div className='overflow-hidden flex flex-col rounded-[26px] font-dm-sans bg-white border border-[#979797] hover:border-0 hover:shadow-7xl'>
+            <div className='h-[283px] shrink-0 w-full overflow-hidden'>
                 <img src={url} alt="" className='w-full min-h-full'/>
             </div>
-            <div className='px-9 py-[18px]'>
-                <h3 className='font-bold text-[23px]  text-black -tracking-[0.642075px] mb-5'>{title}</h3>
-                <article>
+            <div className='pt-[18px] h-full flex border flex-col  '>
+                <h3 className='px-9 font-bold text-[23px] text-black -tracking-[0.642075px] mb-5'>{title}</h3>
+                <article className='px-9 mb-[18px] mt-auto'>
                     <span className='text-[#818181] -tracking-[0.642075px] text-lg '>{type}</span>
                     <p className='text-orange text-[1.5rem] leading-8 font-bold -tracking-[0.642075px]'>${cost}/Month</p>
                 </article>
-            </div>
-            <div className='border-t border-t-[#E4E4E4] grid grid-cols-3'>
+                <div className='border-t border-t-[#E4E4E4] grid grid-cols-3'>
                 <div className='house-spec'>
                     <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.95859 1.61287H8.99068C9.93103 1.61373 10.7475 2.26078 10.9632 3.17607C10.9812 3.25237 11.0493 3.30631 11.1277 3.30649H14.2417C14.2866 3.30666 14.3297 3.28893 14.3615 3.25723C14.3934 3.22554 14.4112 3.18247 14.4112 3.13756V1.44333C14.4112 1.08398 14.2685 0.739356 14.0143 0.485316C13.7601 0.231277 13.4155 0.0886415 13.0561 0.0888063H2.89317C2.53382 0.0886415 2.18913 0.231277 1.93497 0.485316C1.68082 0.739356 1.53802 1.08398 1.53802 1.44333V3.13756C1.53802 3.18247 1.55591 3.22554 1.58772 3.25723C1.61954 3.28893 1.66266 3.30666 1.70757 3.30649H4.82154C4.90012 3.30677 4.96843 3.25263 4.98612 3.17607C5.20177 2.26078 6.01824 1.61373 6.95859 1.61287Z" fill="black"/>
@@ -43,6 +42,7 @@ function HousingCard({title, type, cost, rooms, shower, size, url}) {
                         <path fillRule="evenodd" clipRule="evenodd" d="M12.7498 4.68146C13.1418 4.68146 13.4596 4.99924 13.4596 5.39123V12.489C13.4596 12.881 13.1418 13.1988 12.7498 13.1988H5.65201C5.26001 13.1988 4.94223 12.881 4.94223 12.489V5.39123C4.94223 4.99924 5.26001 4.68146 5.65201 4.68146H12.7498ZM11.6851 11.7791C11.8811 11.7791 12.04 11.6202 12.04 11.4242V6.4558C12.04 6.2598 11.8811 6.10091 11.6851 6.10091H6.71663C6.52063 6.10091 6.36174 6.2598 6.36174 6.4558V11.4242C6.36174 11.6202 6.52063 11.7791 6.71663 11.7791H11.6851Z" fill="black"/>
                     </svg>
                     {size}
+                </div>
                 </div>
             </div>
         </div>
