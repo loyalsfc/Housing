@@ -1,9 +1,11 @@
+import { Input } from 'postcss'
 import React from 'react'
 import logo from '../assets/logo.png'
 import map from '../assets/map.png'
 import Features from './Features'
 import Housing from './Housing'
 import InputWrapper from './InputWrapper'
+import video from '../assets/gowork.mp4'
 
 function Home() {
     return (
@@ -137,17 +139,243 @@ function Home() {
                         <h2 className='font-medium text-[1.5rem] leading-8 text-black mb-9 text-center'>Your property with us and be Confident that Your Room will be Filled Out!</h2>
                         <form className='pt-[25px] pb-[52px] shadow-8xl rounded-[10px] px-[63px]'>
                             <h3 className='text-orange tracking-[0.1px] text-center leading-8 text-[28px] font-poppin font-bold mb-[66px]'>Add A New Property</h3>
-                            <div className='grid grid-cols-3'>
+                            <div className='grid grid-cols-3 gap-6'>
                                 <InputWrapper labelTitle="Name">
-                                    <input type="text" className='bg-[#f9f9f9] h-[50px] border border-[#E6E6E6] rounded-[5px] tracking-[0.2px] text-[#737373] text-sm leading-9 px-5' placeholder='Enter Name'/>
+                                    <input type="text" className='add-input' placeholder='Enter Name'/>
                                 </InputWrapper>
+                                <InputWrapper labelTitle="Address">
+                                    <input type="text" className='add-input' placeholder='Enter Address'/>
+                                </InputWrapper>
+                                <InputWrapper labelTitle="Unit Number">
+                                    <input type="number" className='add-input' placeholder='Enter Unit'/>
+                                </InputWrapper>
+                                <InputWrapper labelTitle="City">
+                                    <select name="cities" id="cities" className="add-input">
+                                        <option value="select">Select City</option>
+                                        <option>San Diego</option>
+                                        <option>New Orleans</option>
+                                        <option>Denver</option>
+                                        <option>Nashvi</option>
+                                        <option>Las Vegas</option>
+                                        <option>Boston</option>
+                                        <option>San Francisco</option>
+                                        <option>San Antonio</option>
+                                        <option>Colorado Sprin</option>
+                                        <option>Seattle</option>
+                                        <option>New York City</option>
+                                        <option>Tampa</option>
+                                        <option>Tamp</option>
+                                        <option>Charlotte</option>
+                                        <option>Miami</option>
+                                        <option>Austi</option>
+                                        <option>Virgi</option>
+                                        <option>Phoen</option>
+                                        <option>Atlan</option>
+                                        <option>Dallas</option>
+                                        <option>Memphis</option>
+                                        <option>Long Beach</option>
+                                        <option>Philadelphia</option>
+                                        <option>Chicago</option>
+                                        <option>Portland </option>
+                                        <option>Tucson</option>
+                                        <option>Houston</option>
+                                        <option>Los Angele</option>
+                                        <option>Jacksonvil</option>
+                                        <option>Portland</option>
+                                        <option>Sacramento</option>
+                                        <option>Fort Worth</option>
+                                    </select>
+                                </InputWrapper>
+                                <InputWrapper labelTitle='State'>
+                                    <select name="states" id="states" className='add-input'>
+                                        <option value="" selected="selected">Select State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </InputWrapper>
+                                <InputWrapper labelTitle="Room Type">
+                                    <select name="room-type" id="room-type" className="add-input">
+                                        <option value="">Select Room Type</option>
+                                        <option>Standard Suite Room </option>
+                                        <option>Junior Suites </option>
+                                        <option>Presidential Suites </option>
+                                        <option>Penthouse Suites </option>
+                                    </select>
+                                </InputWrapper>
+                                <InputWrapper labelTitle="Price">
+                                    <input type="number" className='add-input' placeholder='Enter Price'/>
+                                </InputWrapper>
+                                <InputWrapper labelTitle="Description" autoclass="col-span-3">
+                                    <textarea type="number" className='add-input' placeholder='Enter Description'/>
+                                </InputWrapper>
+                                <div className='col-span-3'>
+                                    <h4 className='label-style'>Upload Photos</h4>
+                                    <label htmlFor="file-upload" className='block py-9 border border-dashed border-orange rounded-[10px] bg-[rgba(244,81,30,0.01)]'>
+                                        <p className='font-poppin font-medium text-black text-center'>Drag your images here, or <span className='text-orange'>browse</span></p>
+                                        <span className='block text-center text-black/[0.5] text-xs mt-1.5'>Supported:  JPG, JPEG, PNG</span>
+                                    </label>
+                                    <input type="file" id='file-upload' name='file-upload' className='hidden' multiple/>
+                                </div>
                             </div>
+                            <button type='button' className='bg-orange py-5 text-white rounded-[10px] w-[60%] mx-auto block mt-[80px]'>Add New Property</button>
                         </form>
                     </div>
                 </div>
             </section>
 
-           
+            <section className='bg-orange/[0.07] flex justify-between items-center mb-[110px] gap-10'>
+                {/* <div className="mx-auto container "> */}
+                    <div className="w-1/2 pl-[129px]">
+                        <article className='text-xl mb-[26px] relative'>
+                            <svg className='absolute -top-8 -left-8 opacity-30' width="71" height="60" viewBox="0 0 71 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M70.6886 9.37093C60.1011 14.577 54.8074 20.6941 54.8074 27.7223C59.3201 28.243 63.0517 30.0868 66.0024 33.2538C68.953 36.4208 70.4283 40.0867 70.4283 44.2516C70.4283 48.6768 68.9964 52.4078 66.1325 55.4447C63.2687 58.4816 59.6672 60 55.3281 60C50.4682 60 46.2593 58.0261 42.7011 54.0781C39.143 50.1301 37.364 45.3363 37.364 39.6963C37.364 22.7765 46.8232 9.54452 65.742 0L70.6886 9.37093ZM33.3246 9.37093C22.6503 14.577 17.3132 20.6941 17.3132 27.7223C21.9127 28.243 25.6877 30.0868 28.6384 33.2538C31.589 36.4208 33.0643 40.0867 33.0643 44.2516C33.0643 48.6768 31.6107 52.4078 28.7034 55.4447C25.7962 58.4816 22.1731 60 17.8339 60C12.974 60 8.78679 58.0261 5.27206 54.0781C1.75734 50.1301 0 45.3363 0 39.6963C0 22.7765 9.41585 9.54452 28.2478 0L33.3246 9.37093Z" fill="#F4511E"/>
+                            </svg>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac, mattis eu velit. Donec sed risus a lacus fringilla finibus.
+                        </article>
+                        <div className='flex gap-5 mb-[75px]'>
+                            <div className='rounded-full border-2 border-orange h-[61px] w-[61px] overflow-hidden'>
+                                <img src="https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full' />
+                            </div>
+                            <article className='flex flex-col justify-between'>
+                                <h4 className='text-lg font-bold leading-9 text-orange'>Harry Wilson </h4>
+                                <p className=''>Property Owner</p>
+                            </article>
+
+                        </div>
+                        <div className='flex gap-3'>
+                            <div className="w-2.5 h-2.5 rounded-full bg-orange"></div>
+                            <div className="w-2.5 h-2.5 rounded-full bg-[#D9DBE1]"></div>
+                            <div className="w-2.5 h-2.5 rounded-full bg-[#D9DBE1]"></div>
+                        </div>
+                    </div>
+                    <div className='h-556px w-1/2 relative border '>
+                        <div className="w-full h-full absolute bg-grad z-10">
+                            <div className='h-[92px] w-[92px] rounded-full bg-orange flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.5396 12.7031L3.42823 21.7267C2.14579 22.4917 0.5 21.5654 0.5 20.0232V1.97593C0.5 0.436145 2.14342 -0.492614 3.42823 0.274834L18.5396 9.29846C18.8313 9.46985 19.0738 9.71759 19.2425 10.0166C19.4112 10.3155 19.5 10.6551 19.5 11.0008C19.5 11.3465 19.4112 11.686 19.2425 11.985C19.0738 12.284 18.8313 12.5317 18.5396 12.7031Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <video poster='https://spikesite2-17132.kxcdn.com/wp-content/uploads/al-ghazali-3KmWk2WC_Z0-unsplash-1024x683.jpg?format=webp' src={video} className="h-[556px] object-cover"></video>
+                    </div>
+                {/* </div> */}
+            </section>
+
+            <footer className='py-[50px]'>
+                <div className="container mx-auto px-4 border-t-2 border-orange pt-[90px] text-sm">
+                    <div className='flex justify-between item-center mb-[105px]'>
+                        <div className='h-fit ml-[134px] w-fit bg-orange p-4 rounded-lg'>
+                            <img src={logo} alt="" />
+                        </div>
+                        <article className='w-1/2 leading-[18px] grid grid-cols-2 gap-4'>
+                            <p className='flex item-center gap-5 col-span-2'>
+                                <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M0 7C0 3.13 3.13 0 7 0C10.87 0 14 3.13 14 7C14 11.17 9.58 16.92 7.77 19.11C7.37 19.59 6.64 19.59 6.24 19.11C4.42 16.92 0 11.17 0 7ZM4.5 7C4.5 8.38 5.62 9.5 7 9.5C8.38 9.5 9.5 8.38 9.5 7C9.5 5.62 8.38 4.5 7 4.5C5.62 4.5 4.5 5.62 4.5 7Z" fill="#F4511E"/>
+                                </svg>
+                                345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
+                            </p>
+                            <p className='flex item-center gap-5'>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M16.23 12.26L13.69 11.97C13.08 11.9 12.48 12.11 12.05 12.54L10.21 14.38C7.38 12.94 5.06 10.63 3.62 7.79001L5.47 5.94001C5.9 5.51001 6.11 4.91001 6.04 4.30001L5.75 1.78001C5.63 0.77001 4.78 0.0100098 3.76 0.0100098H2.03C0.9 0.0100098 -0.0400003 0.95001 0.0299997 2.08001C0.56 10.62 7.39 17.44 15.92 17.97C17.05 18.04 17.99 17.1 17.99 15.97V14.24C18 13.23 17.24 12.38 16.23 12.26Z" fill="#F4511E"/>
+                                </svg>
+                                (123) 456-7890
+                            </p>
+                            <p className="flex item-center gap-5">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M5 0H15C15.55 0 16 0.45 16 1V3C16 3.55 15.55 4 15 4H5C4.45 4 4 3.55 4 3V1C4 0.45 4.45 0 5 0ZM3 5H17C18.66 5 20 6.34 20 8V12C20 13.1 19.1 14 18 14H16V16C16 17.1 15.1 18 14 18H6C4.9 18 4 17.1 4 16V14H2C0.9 14 0 13.1 0 12V8C0 6.34 1.34 5 3 5ZM7 16H13C13.55 16 14 15.55 14 15V11H6V15C6 15.55 6.45 16 7 16ZM17 9C16.45 9 16 8.55 16 8C16 7.45 16.45 7 17 7C17.55 7 18 7.45 18 8C18 8.55 17.55 9 17 9Z" fill="#F4511E"/>
+                                </svg>
+                                (123) 456-7890
+                            </p>
+                            <div className='flex items-center gap-6 col-span-2 mt-10'>
+                                <span className='opacity-50'>Social Media</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6144 21H3.99346C3.44463 21 3 20.5551 3 20.0065V3.99345C3 3.44469 3.4447 3 3.99346 3H20.0066C20.5552 3 21 3.44469 21 3.99345V20.0065C21 20.5552 20.5552 21 20.0066 21H15.4197V14.0294H17.7594L18.1098 11.3128H15.4197V9.57849C15.4197 8.79198 15.6381 8.256 16.766 8.256L18.2045 8.25537V5.82566C17.9557 5.79255 17.1018 5.71859 16.1083 5.71859C14.0343 5.71859 12.6144 6.98457 12.6144 9.30945V11.3128H10.2687V14.0294H12.6144V21Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 6.77573C20.3386 7.07692 19.6265 7.28061 18.8796 7.37161C19.6424 6.90358 20.2277 6.16143 20.5034 5.27736C19.7892 5.71073 19 6.026 18.1569 6.19502C17.4849 5.45937 16.5246 5 15.4617 5C13.4237 5 11.7702 6.69556 11.7702 8.78657C11.7702 9.08342 11.8019 9.37161 11.8653 9.64897C8.79609 9.49079 6.07554 7.98483 4.25304 5.69122C3.93502 6.25244 3.7533 6.90358 3.7533 7.59697C3.7533 8.91008 4.40518 10.0693 5.3962 10.7486C4.79186 10.7302 4.22134 10.558 3.72266 10.2763V10.3229C3.72266 12.1582 4.99577 13.6891 6.68621 14.0358C6.37665 14.1246 6.05018 14.169 5.71315 14.169C5.47544 14.169 5.243 14.1463 5.01796 14.1018C5.48811 15.6056 6.85103 16.701 8.46751 16.7302C7.20391 17.7465 5.61067 18.3521 3.88114 18.3521C3.5832 18.3521 3.28843 18.3348 3 18.3001C4.63444 19.3727 6.57633 20 8.66086 20C15.4543 20 19.168 14.2308 19.168 9.22644C19.168 9.06176 19.1648 8.89707 19.1585 8.73564C19.8801 8.20152 20.5066 7.53521 21 6.77573Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M5.11877 7.77127H5.09337C3.82338 7.77127 3 6.94039 3 5.88717C3 4.81347 3.84772 4 5.14311 4C6.43744 4 7.2333 4.81142 7.2587 5.8841C7.2587 6.93731 6.43744 7.77127 5.11877 7.77127ZM21 20H17.0218V14.3754C17.0218 12.9031 16.3995 11.8981 15.031 11.8981C13.9844 11.8981 13.4023 12.5763 13.1313 13.2299C13.0419 13.4365 13.0435 13.7146 13.0452 14.0012V14.0012C13.0454 14.0401 13.0456 14.0791 13.0456 14.1182V20H9.10442C9.10442 20 9.15522 10.0365 9.10442 9.13082H13.0456V10.8367C13.2785 10.0908 14.5379 9.02632 16.5476 9.02632C19.041 9.02632 21 10.5897 21 13.9563V20ZM6.96237 9.13082H3.45402V20H6.96237V9.13082Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M20.1045 6.96979C20.6439 7.53063 20.82 8.80424 20.82 8.80424C20.82 8.80424 21 10.3002 21 11.7956V13.198C21 14.694 20.82 16.1894 20.82 16.1894C20.82 16.1894 20.6439 17.463 20.1045 18.0239C19.4878 18.6873 18.8039 18.7559 18.4174 18.7946C18.3749 18.7989 18.336 18.8028 18.3011 18.8071C15.7822 18.9942 12 19 12 19C12 19 7.32 18.9561 5.88 18.814C5.81177 18.8009 5.72907 18.7907 5.63541 18.7792C5.17928 18.723 4.46335 18.6348 3.89494 18.0239C3.3555 17.463 3.18 16.1894 3.18 16.1894C3.18 16.1894 3 14.694 3 13.198V11.7956C3 10.3002 3.18 8.80424 3.18 8.80424C3.18 8.80424 3.3555 7.53063 3.89494 6.96979C4.51305 6.30538 5.19754 6.23757 5.58411 6.19928C5.62602 6.19513 5.66443 6.19132 5.69887 6.18714C8.21775 6 11.9961 6 11.9961 6H12.0039C12.0039 6 15.7822 6 18.3011 6.18714C18.3356 6.19133 18.374 6.19514 18.4159 6.1993C18.8022 6.2376 19.487 6.30549 20.1045 6.96979ZM10.1409 9.70414L10.1415 14.8973L15.0043 12.3097L10.1409 9.70414Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M12 3C9.55575 3 9.24926 3.01036 8.28931 3.05416C7.33137 3.09785 6.67712 3.25001 6.10466 3.47251C5.51283 3.70247 5.01092 4.01021 4.51055 4.51055C4.01021 5.01092 3.70247 5.51283 3.47251 6.10466C3.25001 6.67712 3.09785 7.33137 3.05416 8.28931C3.01036 9.24926 3 9.55575 3 12C3 14.4443 3.01036 14.7507 3.05416 15.7107C3.09785 16.6686 3.25001 17.3229 3.47251 17.8953C3.70247 18.4872 4.01021 18.9891 4.51055 19.4895C5.01092 19.9898 5.51283 20.2975 6.10466 20.5275C6.67712 20.75 7.33137 20.9021 8.28931 20.9458C9.24926 20.9896 9.55575 21 12 21C14.4443 21 14.7507 20.9896 15.7107 20.9458C16.6686 20.9021 17.3229 20.75 17.8953 20.5275C18.4872 20.2975 18.9891 19.9898 19.4895 19.4895C19.9898 18.9891 20.2975 18.4872 20.5275 17.8953C20.75 17.3229 20.9021 16.6686 20.9458 15.7107C20.9896 14.7507 21 14.4443 21 12C21 9.55575 20.9896 9.24926 20.9458 8.28931C20.9021 7.33137 20.75 6.67712 20.5275 6.10466C20.2975 5.51283 19.9898 5.01092 19.4895 4.51055C18.9891 4.01021 18.4872 3.70247 17.8953 3.47251C17.3229 3.25001 16.6686 3.09785 15.7107 3.05416C14.7507 3.01036 14.4443 3 12 3ZM12 4.62162C14.4031 4.62162 14.6878 4.6308 15.6368 4.6741C16.5143 4.71411 16.9908 4.86073 17.3079 4.98398C17.728 5.14725 18.0278 5.34227 18.3428 5.65723C18.6577 5.97215 18.8528 6.27196 19.016 6.69206C19.1393 7.00919 19.2859 7.48574 19.3259 8.36323C19.3692 9.31224 19.3784 9.5969 19.3784 12C19.3784 14.4031 19.3692 14.6878 19.3259 15.6368C19.2859 16.5143 19.1393 16.9908 19.016 17.3079C18.8528 17.728 18.6577 18.0278 18.3428 18.3428C18.0278 18.6577 17.728 18.8528 17.3079 19.016C16.9908 19.1393 16.5143 19.2859 15.6368 19.3259C14.6879 19.3692 14.4033 19.3784 12 19.3784C9.59672 19.3784 9.31213 19.3692 8.36323 19.3259C7.48574 19.2859 7.00919 19.1393 6.69206 19.016C6.27196 18.8528 5.97215 18.6577 5.65723 18.3428C5.34231 18.0278 5.14725 17.728 4.98398 17.3079C4.86073 16.9908 4.71411 16.5143 4.6741 15.6368C4.6308 14.6878 4.62162 14.4031 4.62162 12C4.62162 9.5969 4.6308 9.31224 4.6741 8.36323C4.71411 7.48574 4.86073 7.00919 4.98398 6.69206C5.14725 6.27196 5.34227 5.97215 5.65723 5.65723C5.97215 5.34227 6.27196 5.14725 6.69206 4.98398C7.00919 4.86073 7.48574 4.71411 8.36323 4.6741C9.31224 4.6308 9.5969 4.62162 12 4.62162ZM7.37838 12C7.37838 9.44753 9.44753 7.37838 12 7.37838C14.5525 7.37838 16.6216 9.44753 16.6216 12C16.6216 14.5525 14.5525 16.6216 12 16.6216C9.44753 16.6216 7.37838 14.5525 7.37838 12ZM12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15ZM16.8042 8.27577C17.4007 8.27577 17.8842 7.79226 17.8842 7.19579C17.8842 6.59931 17.4007 6.11577 16.8042 6.11577C16.2078 6.11577 15.7242 6.59931 15.7242 7.19579C15.7242 7.79226 16.2078 8.27577 16.8042 8.27577Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M11.8078 13.5863C10.9134 13.5863 8.71698 13.5891 8.71698 13.5891V11.4109H14.2075C14.59 14.0465 13.4364 18 8.71698 18C5.55957 18 3 15.5375 3 12.5C3 9.46242 5.55957 7 8.71698 7C10.1985 7 11.5484 7.54216 12.5641 8.43152C11.777 9.14656 11.5247 9.41914 11.3103 9.65073C11.1988 9.77121 11.0976 9.88059 10.9366 10.0354C10.3492 9.56801 9.70868 9.23267 8.71698 9.23267C6.8413 9.23267 5.37736 10.6955 5.37736 12.5C5.37736 14.3045 6.8413 15.7673 8.71698 15.7673C10.5704 15.7673 11.3235 14.9984 11.8078 13.5863ZM19.0189 9.61386V11.5198H21V12.8812H19.0189V14.8416H17.6038V12.8812H15.566V11.5198H17.6038V9.61386H19.0189Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0005 3C7.03034 3 3 7.02928 3 12.0005C3 15.6848 5.21626 18.8515 8.38825 20.2433C8.36285 19.6156 8.38402 18.8599 8.54384 18.1762C8.71741 17.4459 9.70171 13.2727 9.70171 13.2727C9.70171 13.2727 9.41489 12.698 9.41489 11.8481C9.41489 10.5146 10.1886 9.51861 11.1506 9.51861C11.9688 9.51861 12.3646 10.1335 12.3646 10.8702C12.3646 11.6925 11.8397 12.9234 11.5698 14.0633C11.3443 15.0191 12.0482 15.797 12.9901 15.797C14.6952 15.797 15.8435 13.6072 15.8435 11.012C15.8435 9.04022 14.5153 7.56377 12.099 7.56377C9.36938 7.56377 7.66855 9.59905 7.66855 11.8725C7.66855 12.6578 7.89928 13.2103 8.26125 13.6379C8.42847 13.8358 8.4507 13.9141 8.39037 14.1406C8.34803 14.3046 8.24854 14.7047 8.20727 14.8624C8.14694 15.09 7.96278 15.1725 7.75745 15.0878C6.49903 14.5745 5.91374 13.1976 5.91374 11.6491C5.91374 9.09314 8.06968 6.02593 12.3456 6.02593C15.7821 6.02593 18.0439 8.5142 18.0439 11.1824C18.0439 14.7132 16.0817 17.3507 13.187 17.3507C12.2164 17.3507 11.302 16.8257 10.9887 16.2298C10.9887 16.2298 10.4659 18.3032 10.3558 18.7033C10.1653 19.3965 9.79167 20.0908 9.44981 20.6306C10.2595 20.8698 11.1147 21 12.0005 21C16.9707 21 21 16.9707 21 12.0005C21 7.02928 16.9707 3 12.0005 3Z" fill="#F4511E"/>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M21 21H17.5717C17.5717 12.9649 11.0352 6.42836 3.00019 6.42836V3C12.9252 3 21 11.0749 21 21ZM3.00019 18.4286C3.00019 17.0085 4.15154 15.8571 5.57159 15.8571C6.99165 15.8571 8.14299 17.0085 8.14299 18.4286C8.14299 19.8486 6.99165 21 5.57159 21C4.15154 21 3.00019 19.8486 3.00019 18.4286ZM11.5718 21H15.0001C15.0001 14.3831 9.61686 8.99979 3 8.99979V12.4288C7.72623 12.4288 11.5718 16.2737 11.5718 21Z" fill="#F4511E"/>
+                                </svg>
+                            </div>
+                        </article>
+                    </div>
+                    <div className='flex justify-around'>
+                        <ul className='flex gap-5'>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Help</li>
+                            <li>Privacy Policy</li>
+                            <li>Disclaimer</li>
+                        </ul>
+                        <p className='opacity-50 mix-blend-normal'>Copyright © 2020 Minimumlivingcost. All rights reserved</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 }
