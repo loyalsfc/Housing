@@ -23,7 +23,7 @@
 
 @layer utilities{
   .select-wrap{
-    @apply px-[23px] py-[15px] bg-[#F9F9F9] border border-[#E6E6E6]
+    @apply px-1 md:px-[23px] py-2 md:py-[15px] bg-[#F9F9F9] border border-[#E6E6E6]
   }
   .house-spec{
     @apply border-r border-r-[#E4E4E4] last:border-r-0 flex items-center justify-center gap-2.5 text-black -tracking-[0.454803px] text-lg font-bold leading-6 py-5
@@ -39,6 +39,12 @@
   }
   .label-style{
     @apply block tracking-[0.2px] mb-[5px] leading-6 text-[17px] font-semibold font-poppin text-[#252B42]
+  }
+  .active-nav{
+    @apply underline font-medium underline-offset-[28.23px] decoration-[2.23px]
+  }
+  .img-overlay{
+    @apply h-full w-full absolute top-0 left-0 bg-black/[0.2] z-10 text-lg md:text-[1.2rem] font-semibold text-center text-white py-4 lg:py-[30px] px-1.5 lg:px-3
   }
 }
 .hero{

@@ -3,14 +3,14 @@ import React from 'react'
 function HousingCard({title, type, cost, rooms, shower, size, url}) {
     return (
         <div className='overflow-hidden flex flex-col rounded-[26px] font-dm-sans bg-white border border-[#979797] hover:border-0 hover:shadow-7xl'>
-            <div className='h-[283px] shrink-0 w-full overflow-hidden'>
+            <div className='h-[283p] shrink-0 w-full overflow-hidden'>
                 <img src={url} alt="" className='w-full min-h-full'/>
             </div>
             <div className='pt-[18px] h-full flex border flex-col  '>
-                <h3 className='px-9 font-bold text-[23px] text-black -tracking-[0.642075px] mb-5'>{title}</h3>
-                <article className='px-9 mb-[18px] mt-auto'>
-                    <span className='text-[#818181] -tracking-[0.642075px] text-lg '>{type}</span>
-                    <p className='text-orange text-[1.5rem] leading-8 font-bold -tracking-[0.642075px]'>${cost}/Month</p>
+                <h3 className='px-5 lg:px-9 font-bold text-xl md:text-[23px] text-black -tracking-[0.642075px] mb-5'>{title}</h3>
+                <article className='px-4 lg:px-9 mb-2 md:mb-[18px] mt-auto'>
+                    <span className='text-[#818181] -tracking-[0.642075px] text-sm md:text-lg '>{type}</span>
+                    <p className='text-orange text-lg md:text-[1.5rem] md:leading-8 font-bold -tracking-[0.642075px]'>${cost}/Month</p>
                 </article>
                 <div className='border-t border-t-[#E4E4E4] grid grid-cols-3'>
                 <div className='house-spec'>

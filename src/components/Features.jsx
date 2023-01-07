@@ -6,7 +6,7 @@ function Features({children, title}) {
             <div className='bg-white rounded-[10px] shadow-5xl w-fit p-4 mb-5'>
                 {children}
             </div>
-            <h3 className='font-semibold text-[26px] leading-[135%]'>{title}</h3>
+            <h3 className='font-semibold text-xl lg:text-[26px] leading-[135%]'>{title}</h3>
         </div>
     )
 }

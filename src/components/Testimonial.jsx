@@ -3,8 +3,8 @@ import React from 'react'
 function Testimonial({content, img, name, position}) {
     return (
         <div className='w-full shrink-0'>
-            <article className='text-xl mb-[26px]'>{content}</article>
-            <div className='flex gap-5 mb-[75px]'>
+            <article className='text-lg md:text-xl mb-[26px] w-full'>{content}</article>
+            <div className='flex gap-5 mb-10 md:mb-[75px]'>
                 <div className='rounded-full border-2 border-orange h-[61px] w-[61px] overflow-hidden'>
                     <img src={img} alt="" className='w-full' />
                 </div>

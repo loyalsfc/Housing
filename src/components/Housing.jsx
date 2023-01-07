@@ -38,40 +38,29 @@ function Housing() {
         })
     }
 
-    function removeActive(){
-        document.querySelectorAll('.pagination').forEach(item => {
-            item.classList.remove('active-page')
-        })
-    }
-
     function handleClick(e){
         setCurrentPage(parseInt(e.target.getAttribute('data-id')))
-        removeActive()
         scrollTop()
-        e.target.classList.add('active-page')
     }
 
     function moveToFirstPage(){
         setCurrentPage(1)
-        removeActive()
         scrollTop()
-        document.querySelectorAll('.pagination')[0].classList.add('active-page')
     }
 
     function nextPage(){
         setCurrentPage(currentPage + 1)
         scrollTop()
-        // document.querySelectorAll('.pagination')[currentPage].classList.add('active-page')
     }
     
     return (
         <main ref={pageContainer} className='bg-[#F5F5F5] pt-[60px] pb-[81px]'>
                 <div className="container mx-auto px-4">
-                    <div className='flex justify-between items-end mb-[69px]'>
-                        <h2 className='text-[36px] font-[800] leading-[178%] after:content-[""] after:block after:h-[3px] after:bg-orange after:w-[30%]'>List of Properties</h2>
-                        <button className='font-manrope text-white font-[17px] font-medium rounded-[5px] bg-orange py-5 px-8'>View All Property</button>
+                    <div className='flex justify-between items-end mb-10 md:mb-[69px]'>
+                        <h2 className='text-lg md:text-[36px] font-[800] leading-[178%] after:content-[""] after:block after:h-[3px] after:bg-orange after:w-[30%]'>List of Properties</h2>
+                        <button className='font-manrope text-white text-sm sm:text-[17px] font-medium rounded-[5px] bg-orange py-1.5 px-2.5 md:py-5 md:px-8'>View All Property</button>
                     </div>
-                    <div className='grid grid-cols-3 gap-x-[33px] gap-y-[61px] mb-[109px]'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[33px] gap-y-[61px] mb-[109px]'>
                         {availableHouse}
                     </div>
                     <div className='w-fit mx-auto rounded-md border-2 overflow-hidden border-muted bg-white text-orange text-center font-bold tracking-[0.1px] shadow-[0px_2px_4px_rgba(0,0,0,0.1)]'>

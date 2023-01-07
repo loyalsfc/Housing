@@ -3,6 +3,7 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import map from '../assets/map.png'
 import Features from './Features'
+import Header from './Header'
 import Housing from './Housing'
 import InputWrapper from './InputWrapper'
 import VideoSection from './VideoSection'
@@ -10,25 +11,15 @@ import VideoSection from './VideoSection'
 function Home() {
     return (
         <div>
-            <div className='h-screen hero'>
+            <div className='h-screen hero overflow-hidden'>
                 <div className="container mx-auto px-4">
                     <div className=" text-white h-screen flex flex-col">
-                        <header className='pt-[19px] pb-[22px] border-b-[0.5px] border-b-white flex items-end font-medium font-dm-sans text-lg'>
-                            <img src={logo} alt="" className='h-[50px]'/>
-                            <nav className='mx-auto'>
-                                <ul className='flex gap-14'>
-                                    <li className='underline font-medium underline-offset-[28.23px] decoration-[2.23px]'>Home</li>
-                                    <li>Landlord</li>
-                                    <li>Tenants</li>
-                                    <li>Contact Us</li>
-                                </ul>
-                            </nav>
-                        </header>
-                        <section className='flex items-center h-full'>
-                            <h1 className='font-bold text-[3.25rem] leading-[135%] -tracking-[1px] max-w-[584px]'>The most affordable place to stay in the san franciso bay area</h1>
-                            <div className='flex flex-col items-center gap-5 grow-0 w-1/2'>
-                                <img src={map} alt="" className='rounded-[15px] h-[340px] shadow-4xl'/>
-                                <div className='py-[15px] px-[22px] rounded-[10px] bg-white w-fit border border-black/[0.2] font-poppin font-medium text-[#252B42] tracking-[0.2px] flex'>
+                        <Header />
+                        <section className='flex flex-col lg:flex-row items-center justify-around h-full'>
+                            <h1 className='text-center lg:text-left font-bold text-[1.5rem] md:text-[2.5rem] mb-4 lg:mb-0 lg:text-[3.25rem] leading-[135%] -tracking-[1px] lg:max-w-[584px]'>The most affordable place to stay in the san franciso bay area</h1>
+                            <div className='flex flex-col items-center gap-5 grow-0 lg:w-1/2 px'>
+                                <img src={map} alt="" className='rounded-[15px] shadow-4xl w-2/3 lg:h-[340px]'/>
+                                <div className='py-1 sm:py-[15px] px-2 sm:px-[22px] rounded-[10px] bg-white w-fit  border border-black/[0.2] font-poppin font-medium text-[#252B42] tracking-[0.2px] flex'>
                                     <div className='select-wrap rounded-l-[5px]'>
                                         <select name="type" id="house-type" className='bg-transparent focus:outline-0'>
                                             <option value="all">All Type</option>
@@ -55,13 +46,13 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <section className='py-[93px]'>
-                <div className="container mx-auto px-4">
-                        <h2 className='font-[800] text-[2.25rem] leading-[178%] mb-[38px]'><span className='border-b-[3px] border-b-orange'>Minimum Living Cost</span> Takes Care of Everything</h2>
-                        <div className='flex gap-[65px] items-center'>
-                            <div className='shrink-0 w-[387px] h-[521px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden shadow-6xl relative bg-[url("https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-center bg-cover bg-norepeat'>
+            <section className='py-12 md:py-[93px]'>
+                <div className="container mx-auto px-4 md:px-0">
+                        <h2 className='font-[800] text-[1.75rem] text-center lg:text-left md:text-[2.25rem] leading-[178%] mb-[38px]'><span className='lg:border-b-[3px] border-b-orange'>Minimum Living Cost</span> Takes Care of Everything</h2>
+                        <div className='flex gap-10 items-center'>
+                            <div className='hidden lg:block shrink-0 w-[387px] h-[521px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden shadow-6xl relative bg-[url("https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-center bg-cover bg-norepeat'>
                             </div>
-                            <div className='grid grid-cols-3 gap-y-[92px]'>
+                            <div className='grid grid-cols-2 grid-cols-3 sm:grid-cols-3 gap-12 lg:gap-y-[92px] gap-x-10 lg:gap-x-1'>
                                 <Features title="Pay as Little as possible!">
                                     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.5 38.25C9.14439 38.25 0.750015 29.8556 0.750015 19.5C0.750015 9.14437 9.14439 0.75 19.5 0.75C29.8556 0.75 38.25 9.14437 38.25 19.5C38.25 29.8556 29.8556 38.25 19.5 38.25ZM19.5 34.5C23.4783 34.5 27.2936 32.9196 30.1066 30.1066C32.9197 27.2936 34.5 23.4782 34.5 19.5C34.5 15.5218 32.9197 11.7064 30.1066 8.8934C27.2936 6.08035 23.4783 4.5 19.5 4.5C15.5218 4.5 11.7065 6.08035 8.89341 8.8934C6.08037 11.7064 4.50001 15.5218 4.50001 19.5C4.50001 23.4782 6.08037 27.2936 8.89341 30.1066C11.7065 32.9196 15.5218 34.5 19.5 34.5ZM12.9375 23.25H23.25C23.4987 23.25 23.7371 23.1512 23.9129 22.9754C24.0887 22.7996 24.1875 22.5611 24.1875 22.3125C24.1875 22.0639 24.0887 21.8254 23.9129 21.6496C23.7371 21.4738 23.4987 21.375 23.25 21.375H15.75C14.5068 21.375 13.3145 20.8811 12.4355 20.0021C11.5564 19.123 11.0625 17.9307 11.0625 16.6875C11.0625 15.4443 11.5564 14.252 12.4355 13.3729C13.3145 12.4939 14.5068 12 15.75 12H17.625V8.25H21.375V12H26.0625V15.75H15.75C15.5014 15.75 15.2629 15.8488 15.0871 16.0246C14.9113 16.2004 14.8125 16.4389 14.8125 16.6875C14.8125 16.9361 14.9113 17.1746 15.0871 17.3504C15.2629 17.5262 15.5014 17.625 15.75 17.625H23.25C24.4932 17.625 25.6855 18.1189 26.5646 18.9979C27.4437 19.877 27.9375 21.0693 27.9375 22.3125C27.9375 23.5557 27.4437 24.748 26.5646 25.6271C25.6855 26.5061 24.4932 27 23.25 27H21.375V30.75H17.625V27H12.9375V23.25Z" fill="#F4511E"/>
@@ -101,37 +92,49 @@ function Home() {
                 
             <section>
                 <div className="container mx-auto px-4 py-[110px]">
-                    <div className='flex items-center gap-5 mb-[110px]'>
-                        <div className='w-1/2 shrink-0'>
+                    <div className='flex flex-col-reverse md:flex-row items-center gap-5 mb-[110px]'>
+                        <div className='w-full md:w-1/2 shrink-0'>
                             <div className='flex items-end mb-5'>
-                                <div className='rounded-[1.25rem] overflow-hidden w-1/2 mr-5'>
+                                <div className='rounded-[1.25rem] overflow-hidden w-1/2 mr-5 relative'>
+                                    <div className="img-overlay">
+                                        Flexible Lease
+                                    </div>
                                     <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="" />
                                 </div>
-                                <div className='rounded-[1.25rem] overflow-hidden w-1/2 h-fit mr-5'>
+                                <div className='rounded-[1.25rem] overflow-hidden w-1/2 h-fit mr-5 relative'>
+                                    <div className="img-overlay">
+                                        7-Day Happiness Guaranteed
+                                    </div>
                                     <img src="https://www.english.com/blog/wp-content/uploads/2021/09/6-ways-to-get-the-best-results-on-your-Versant-English-test-1132x670.png" alt="" />
                                 </div>
                             </div>
                             <div className='flex items-start'>
-                                <div className='rounded-[1.25rem] overflow-hidden w-1/3 mr-5 max-h-[285px]'>
+                                <div className='rounded-[1.25rem] overflow-hidden w-1/3 mr-5 max-h-[285px] relative'>
+                                    <div className="img-overlay">
+                                        Monthly House Cleaning
+                                    </div>
                                     <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
                                 </div>
-                                <div className='rounded-[1.25rem] overflow-hidden w-2/3 h-fit max-h-[356px] flex items-center'>
+                                <div className='rounded-[1.25rem] overflow-hidden w-2/3 h-fit max-h-[356px] flex items-center relative'>
+                                    <div className="img-overlay">
+                                        Choose your own roomates
+                                    </div>
                                     <img src="https://images.unsplash.com/photo-1633113214698-485cdb2f56fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" className='w-full'/>
                                 </div>
                             </div>
                         </div>
-                        <article className="w-1/2 shrink-0 px-12">
-                            <h2 className='text-[2.5rem] leading-[135%] font-[800] mb-1'>Flexibility and options to suit your lifestyle.</h2>
+                        <article className="w-full md:w-1/2 shrink-0 mb-12 md:mb-0 md:px-6 lg:px-12">
+                            <h2 className='text-2xl md:text-3xl lg:text-[2.5rem] leading-[135%] font-[800] mb-1'>Flexibility and options to suit your lifestyle.</h2>
                             <p className='text-lg leading-8 mb-10'>You need it? We got it. We make finding your next home easy, comfortable, and simple. From our happiness guarantee to our selective roommate finder option. We provide you the flexibility that you most desire.</p>
-                            <button className="bg-orange rounded-[13px] text-white px-9 py-[22px] text-lg ">Search Rooms</button>
+                            <button className="bg-orange rounded-[13px] text-white px-9 py-4 md:py-[22px] text-lg ">Search Rooms</button>
                         </article>
                     </div>
 
                     <div>
-                        <h2 className='font-medium text-[1.5rem] leading-8 text-black mb-9 text-center'>Your property with us and be Confident that Your Room will be Filled Out!</h2>
-                        <form className='pt-[25px] pb-[52px] shadow-8xl rounded-[10px] px-[63px]'>
-                            <h3 className='text-orange tracking-[0.1px] text-center leading-8 text-[28px] font-poppin font-bold mb-[66px]'>Add A New Property</h3>
-                            <div className='grid grid-cols-3 gap-6'>
+                        <h2 className='font-medium text-xl md:text-[1.5rem] leading-8 text-black mb-9 text-center'>Your property with us and be Confident that Your Room will be Filled Out!</h2>
+                        <form className='pt-[25px] pb-[52px] shadow-8xl rounded-[10px] px-4 sm:px-8 md:px-12 lg:px-[63px]'>
+                            <h3 className='text-orange tracking-[0.1px] text-center leading-8 text-2xl md:text-[28px] font-poppin font-bold mb-8 md:mb-[66px]'>Add A New Property</h3>
+                            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6'>
                                 <InputWrapper labelTitle="Name">
                                     <input type="text" className='add-input' placeholder='Enter Name'/>
                                 </InputWrapper>
@@ -246,10 +249,10 @@ function Home() {
                                 <InputWrapper labelTitle="Price">
                                     <input type="number" className='add-input' placeholder='Enter Price'/>
                                 </InputWrapper>
-                                <InputWrapper labelTitle="Description" autoclass="col-span-3">
+                                <InputWrapper labelTitle="Description" autoclass="sm:col-span-2 md:col-span-3">
                                     <textarea type="number" className='add-input' placeholder='Enter Description'/>
                                 </InputWrapper>
-                                <div className='col-span-3'>
+                                <div className='sm:col-span-2 md:col-span-3'>
                                     <h4 className='label-style'>Upload Photos</h4>
                                     <label htmlFor="file-upload" className='block py-9 border border-dashed border-orange rounded-[10px] bg-[rgba(244,81,30,0.01)]'>
                                         <p className='font-poppin font-medium text-black text-center'>Drag your images here, or <span className='text-orange'>browse</span></p>
@@ -258,7 +261,7 @@ function Home() {
                                     <input type="file" id='file-upload' name='file-upload' className='hidden' multiple/>
                                 </div>
                             </div>
-                            <button type='button' className='bg-orange py-5 text-white rounded-[10px] w-[60%] mx-auto block mt-[80px]'>Add New Property</button>
+                            <button type='button' className='bg-orange py-5 text-white rounded-[10px] w-full sm:w-[60%] mx-auto block mt-12 md:mt-[80px]'>Add New Property</button>
                         </form>
                     </div>
                 </div>
@@ -266,13 +269,13 @@ function Home() {
 
             <VideoSection />
 
-            <footer className='py-[50px]'>
-                <div className="container mx-auto px-4 border-t-2 border-orange pt-[90px] text-sm">
-                    <div className='flex justify-between item-center mb-[105px]'>
-                        <div className='h-fit ml-[134px] w-fit bg-orange p-4 rounded-lg'>
-                            <img src={logo} alt="" />
+            <footer className='pt-[50px] pb-6 md:py-[50px]'>
+                <div className="container mx-auto px-4 border-t-2 border-orange pt-10 md:pt-[90px] text-sm">
+                    <div className='flex flex-col md:flex-row justify-between item-center mb-16 md:mb-[105px]'>
+                        <div className='h-fit mx-auto w-fit bg-orange p-4 rounded-lg mb-4 md:mb-0'>
+                            <img src={logo} alt="" className=''/>
                         </div>
-                        <article className='w-1/2 leading-[18px] grid grid-cols-2 gap-4'>
+                        <article className='md:w-1/2 leading-[18px] grid grid-cols-2 gap-4 mx-auto md:mx-0'>
                             <p className='flex item-center gap-5 col-span-2'>
                                 <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M0 7C0 3.13 3.13 0 7 0C10.87 0 14 3.13 14 7C14 11.17 9.58 16.92 7.77 19.11C7.37 19.59 6.64 19.59 6.24 19.11C4.42 16.92 0 11.17 0 7ZM4.5 7C4.5 8.38 5.62 9.5 7 9.5C8.38 9.5 9.5 8.38 9.5 7C9.5 5.62 8.38 4.5 7 4.5C5.62 4.5 4.5 5.62 4.5 7Z" fill="#F4511E"/>
@@ -291,7 +294,7 @@ function Home() {
                                 </svg>
                                 (123) 456-7890
                             </p>
-                            <div className='flex items-center gap-6 col-span-2 mt-10'>
+                            <div className='flex items-center gap-2 md:gap-6 flex-nowrap col-span-2 mt-4 md:mt-10'>
                                 <span className='opacity-50'>Social Media</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.6144 21H3.99346C3.44463 21 3 20.5551 3 20.0065V3.99345C3 3.44469 3.4447 3 3.99346 3H20.0066C20.5552 3 21 3.44469 21 3.99345V20.0065C21 20.5552 20.5552 21 20.0066 21H15.4197V14.0294H17.7594L18.1098 11.3128H15.4197V9.57849C15.4197 8.79198 15.6381 8.256 16.766 8.256L18.2045 8.25537V5.82566C17.9557 5.79255 17.1018 5.71859 16.1083 5.71859C14.0343 5.71859 12.6144 6.98457 12.6144 9.30945V11.3128H10.2687V14.0294H12.6144V21Z" fill="#F4511E"/>
@@ -320,8 +323,8 @@ function Home() {
                             </div>
                         </article>
                     </div>
-                    <div className='flex justify-around'>
-                        <ul className='flex gap-5'>
+                    <div className='flex flex-col md:flex-row justify-around text-center  gap-4'>
+                        <ul className='flex gap-3 lg:gap-5 mx-auto'>
                             <li>About Us</li>
                             <li>Contact Us</li>
                             <li>Help</li>
