@@ -1,4 +1,3 @@
-import { Input } from 'postcss'
 import React from 'react'
 import logo from '../assets/logo.png'
 import map from '../assets/map.png'
@@ -15,7 +14,7 @@ function Home() {
                 <div className="container mx-auto px-4">
                     <div className=" text-white h-screen flex flex-col">
                         <Header />
-                        <section className='flex flex-col lg:flex-row items-center justify-around h-full'>
+                        <section className='flex flex-col lg:flex-row items-center justify-around h-full py-12 md:py-0'>
                             <h1 className='text-center lg:text-left font-bold text-[1.5rem] md:text-[2.5rem] mb-4 lg:mb-0 lg:text-[3.25rem] leading-[135%] -tracking-[1px] lg:max-w-[584px]'>The most affordable place to stay in the san franciso bay area</h1>
                             <div className='flex flex-col items-center gap-5 grow-0 lg:w-1/2 px'>
                                 <img src={map} alt="" className='rounded-[15px] shadow-4xl w-2/3 lg:h-[340px]'/>
@@ -47,7 +46,7 @@ function Home() {
                 </div>
             </div>
             <section className='py-12 md:py-[93px]'>
-                <div className="container mx-auto px-4 md:px-0">
+                <div className="container mx-auto px-4  ">
                         <h2 className='font-[800] text-[1.75rem] text-center lg:text-left md:text-[2.25rem] leading-[178%] mb-[38px]'><span className='lg:border-b-[3px] border-b-orange'>Minimum Living Cost</span> Takes Care of Everything</h2>
                         <div className='flex gap-10 items-center'>
                             <div className='hidden lg:block shrink-0 w-[387px] h-[521px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden shadow-6xl relative bg-[url("https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-center bg-cover bg-norepeat'>
@@ -132,7 +131,7 @@ function Home() {
 
                     <div>
                         <h2 className='font-medium text-xl md:text-[1.5rem] leading-8 text-black mb-9 text-center'>Your property with us and be Confident that Your Room will be Filled Out!</h2>
-                        <form className='pt-[25px] pb-[52px] shadow-8xl rounded-[10px] px-4 sm:px-8 md:px-12 lg:px-[63px]'>
+                        <form className='py-[52px] shadow-8xl rounded-[10px] px-4 sm:px-8 md:px-12 lg:px-[63px]'>
                             <h3 className='text-orange tracking-[0.1px] text-center leading-8 text-2xl md:text-[28px] font-poppin font-bold mb-8 md:mb-[66px]'>Add A New Property</h3>
                             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6'>
                                 <InputWrapper labelTitle="Name">
@@ -323,8 +322,8 @@ function Home() {
                             </div>
                         </article>
                     </div>
-                    <div className='flex flex-col md:flex-row justify-around text-center  gap-4'>
-                        <ul className='flex gap-3 lg:gap-5 mx-auto'>
+                    <div className='flex flex-col md:flex-row justify-between text-center border-t border-[#7BB9FC]/0.2 gap-4 pt-4 max-w-[975px] mx-auto'>
+                        <ul className='flex gap-3 lg:gap-5 mx-auto md:mx-0 overflow-hidden'>
                             <li>About Us</li>
                             <li>Contact Us</li>
                             <li>Help</li>

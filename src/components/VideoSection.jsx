@@ -8,6 +8,7 @@ function VideoSection() {
     const playBtnWrapper = useRef()
     const testimoneyWrapper = useRef()
     
+    //Displaying available testimonials
     const testimonies = Testimonies.map(item => {
         return (
             <Testimonial 
@@ -20,6 +21,7 @@ function VideoSection() {
         )
     })
 
+    //Displaying sliders for testimonials available
     const testimoniesSlider = Testimonies.map((item, index) => {
         return (
             <div 
@@ -31,31 +33,42 @@ function VideoSection() {
         )
     })
 
+    //Changing the current testimonial to the selected testimonial
     function testimonySlider(event, index){
+        // Get the total width of the testimonial container 
         const containerWidth = testimoneyWrapper.current.clientWidth
+        // Scrolling to the selected testimonial by multiplying its index with the container width 
         testimoneyWrapper.current.scrollTo({
             left: index * containerWidth,
             behavior: 'smooth',
         })
+        //Replace active color to regular color for all the sliders item
         document.querySelectorAll('.sliders').forEach(item=>{
             item.classList.replace('bg-orange', 'bg-[#D9DBE1]')
         })
+        // Set the current slider to the active color 
         event.target.classList.replace('bg-[#D9DBE1]', 'bg-orange')
     }
 
-    function playVideo(){
-        videoPlayer.current.play()
-        playBtnWrapper.current.classList.add('hidden')
-        videoPlayer.current.addEventListener('ended', function(){
-            playBtnWrapper.current.classList.remove('hidden')
-            this.controls = false;
-        })
-        videoPlayer.current.addEventListener('pause', function(){
-            playBtnWrapper.current.classList.remove('hidden')
-            this.controls = false;
-        })
 
+    function playVideo(){
+        //Set the video player to play
+        videoPlayer.current.play()
+        //Hide the Play Icon once video start playing 
+        playBtnWrapper.current.classList.add('scale-0')
+        // Once video has finished playing Show the playbutton and hide the video controls 
+        videoPlayer.current.addEventListener('ended', function(){
+            playBtnWrapper.current.classList.remove('scale-0')
+            this.controls = false;
+        })
+        // when the video is paused, show the playbutton and hide the video controls 
+        videoPlayer.current.addEventListener('pause', function(){
+            playBtnWrapper.current.classList.remove('scale-0')
+            this.controls = false;
+        })
+        //Show the video control once video start playing
         videoPlayer.current.addEventListener('play', function(){
+            console.log(this)
             this.controls = true;
         })
     }
@@ -76,7 +89,7 @@ function VideoSection() {
                 </div>
             </div>
             <div className='h-556px w-1/2 shrink-0 relative hidden md:block '>
-                <div ref={playBtnWrapper} className="w-full h-full absolute bg-grad z-10">
+                <div ref={playBtnWrapper} className="w-full h-full absolute bg-grad z-10 transition-all">
                     <div onClick={playVideo} className='h-[92px] w-[92px] rounded-full bg-orange flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                         <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.5396 12.7031L3.42823 21.7267C2.14579 22.4917 0.5 21.5654 0.5 20.0232V1.97593C0.5 0.436145 2.14342 -0.492614 3.42823 0.274834L18.5396 9.29846C18.8313 9.46985 19.0738 9.71759 19.2425 10.0166C19.4112 10.3155 19.5 10.6551 19.5 11.0008C19.5 11.3465 19.4112 11.686 19.2425 11.985C19.0738 12.284 18.8313 12.5317 18.5396 12.7031Z" fill="white"/>

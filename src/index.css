@@ -29,7 +29,7 @@
     @apply border-r border-r-[#E4E4E4] last:border-r-0 flex items-center justify-center gap-2.5 text-black -tracking-[0.454803px] text-lg font-bold leading-6 py-5
   }
   .pagination{
-    @apply py-[25px] w-[47px] inline-block border-x border-x-muted
+    @apply py-[25px] w-9 sm:w-[47px] inline-block border-x border-x-muted
   }
   .active-page{
     @apply bg-orange text-white
