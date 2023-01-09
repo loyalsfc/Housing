@@ -15,10 +15,10 @@ function Home() {
                     <div className=" text-white h-screen flex flex-col">
                         <Header />
                         <section className='flex flex-col lg:flex-row items-center justify-around h-full py-12 md:py-0'>
-                            <h1 className='text-center lg:text-left font-bold text-[1.5rem] md:text-[2.5rem] mb-4 lg:mb-0 lg:text-[3.25rem] leading-[135%] -tracking-[1px] lg:max-w-[584px]'>The most affordable place to stay in the san franciso bay area</h1>
-                            <div className='flex flex-col items-center gap-5 grow-0 lg:w-1/2 px'>
-                                <img src={map} alt="" className='rounded-[15px] shadow-4xl w-2/3 lg:h-[340px]'/>
-                                <div className='py-1 sm:py-[15px] px-2 sm:px-[22px] rounded-[10px] bg-white w-fit  border border-black/[0.2] font-poppin font-medium text-[#252B42] tracking-[0.2px] flex'>
+                            <h1 data-aos="zoom-in" className='text-center lg:text-left font-bold text-[1.5rem] md:text-[2.5rem] mb-4 lg:mb-0 lg:text-[3.25rem] leading-[135%] -tracking-[1px] lg:max-w-[584px]'>The most affordable place to stay in the san franciso bay area</h1>
+                            <div data-aos="slide-up" className='flex flex-col items-center gap-5 grow-0 lg:w-1/2 px'>
+                                <img data-aos="slide-up" src={map} alt="" className='rounded-[15px] shadow-4xl w-2/3 lg:h-[340p]'/>
+                                <div data-aos="slide-up" className='py-1 sm:py-[15px] px-2 sm:px-[22px] rounded-[10px] bg-white w-fit  border border-black/[0.2] font-poppin font-medium text-[#252B42] tracking-[0.2px] flex'>
                                     <div className='select-wrap rounded-l-[5px]'>
                                         <select name="type" id="house-type" className='bg-transparent focus:outline-0'>
                                             <option value="all">All Type</option>
@@ -46,12 +46,12 @@ function Home() {
                 </div>
             </div>
             <section className='py-12 md:py-[93px]'>
-                <div className="container mx-auto px-4  ">
-                        <h2 className='font-[800] text-[1.75rem] text-center lg:text-left md:text-[2.25rem] leading-[178%] mb-[38px]'><span className='lg:border-b-[3px] border-b-orange'>Minimum Living Cost</span> Takes Care of Everything</h2>
+                <div className="container mx-auto px-4 overflow-hidden ">
+                        <h2 data-aos="fade-up" className='font-[800] text-[1.75rem] text-center lg:text-left md:text-[2.25rem] leading-[178%] mb-[38px]'><span className='lg:border-b-[3px] border-b-orange'>Minimum Living Cost</span> Takes Care of Everything</h2>
                         <div className='flex gap-10 items-center'>
-                            <div className='hidden lg:block shrink-0 w-[387px] h-[521px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden shadow-6xl relative bg-[url("https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-center bg-cover bg-norepeat'>
+                            <div data-aos="slide-right" className='hidden lg:block shrink-0 w-[387px] h-[521px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden shadow-6xl relative bg-[url("https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-center bg-cover bg-norepeat'>
                             </div>
-                            <div className='grid grid-cols-2 grid-cols-3 sm:grid-cols-3 gap-12 lg:gap-y-[92px] gap-x-10 lg:gap-x-1'>
+                            <div data-aos="zoom-out" className='grid grid-cols-2 grid-cols-3 sm:grid-cols-3 gap-12 lg:gap-y-[92px] gap-x-10 lg:gap-x-1'>
                                 <Features title="Pay as Little as possible!">
                                     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.5 38.25C9.14439 38.25 0.750015 29.8556 0.750015 19.5C0.750015 9.14437 9.14439 0.75 19.5 0.75C29.8556 0.75 38.25 9.14437 38.25 19.5C38.25 29.8556 29.8556 38.25 19.5 38.25ZM19.5 34.5C23.4783 34.5 27.2936 32.9196 30.1066 30.1066C32.9197 27.2936 34.5 23.4782 34.5 19.5C34.5 15.5218 32.9197 11.7064 30.1066 8.8934C27.2936 6.08035 23.4783 4.5 19.5 4.5C15.5218 4.5 11.7065 6.08035 8.89341 8.8934C6.08037 11.7064 4.50001 15.5218 4.50001 19.5C4.50001 23.4782 6.08037 27.2936 8.89341 30.1066C11.7065 32.9196 15.5218 34.5 19.5 34.5ZM12.9375 23.25H23.25C23.4987 23.25 23.7371 23.1512 23.9129 22.9754C24.0887 22.7996 24.1875 22.5611 24.1875 22.3125C24.1875 22.0639 24.0887 21.8254 23.9129 21.6496C23.7371 21.4738 23.4987 21.375 23.25 21.375H15.75C14.5068 21.375 13.3145 20.8811 12.4355 20.0021C11.5564 19.123 11.0625 17.9307 11.0625 16.6875C11.0625 15.4443 11.5564 14.252 12.4355 13.3729C13.3145 12.4939 14.5068 12 15.75 12H17.625V8.25H21.375V12H26.0625V15.75H15.75C15.5014 15.75 15.2629 15.8488 15.0871 16.0246C14.9113 16.2004 14.8125 16.4389 14.8125 16.6875C14.8125 16.9361 14.9113 17.1746 15.0871 17.3504C15.2629 17.5262 15.5014 17.625 15.75 17.625H23.25C24.4932 17.625 25.6855 18.1189 26.5646 18.9979C27.4437 19.877 27.9375 21.0693 27.9375 22.3125C27.9375 23.5557 27.4437 24.748 26.5646 25.6271C25.6855 26.5061 24.4932 27 23.25 27H21.375V30.75H17.625V27H12.9375V23.25Z" fill="#F4511E"/>
@@ -94,13 +94,13 @@ function Home() {
                     <div className='flex flex-col-reverse md:flex-row items-center gap-5 mb-[110px]'>
                         <div className='w-full md:w-1/2 shrink-0'>
                             <div className='flex items-end mb-5'>
-                                <div className='rounded-[1.25rem] overflow-hidden w-1/2 mr-5 relative'>
+                                <div data-aos="zoom-in" className='rounded-[1.25rem] overflow-hidden w-1/2 mr-5 relative'>
                                     <div className="img-overlay">
                                         Flexible Lease
                                     </div>
                                     <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="" />
                                 </div>
-                                <div className='rounded-[1.25rem] overflow-hidden w-1/2 h-fit mr-5 relative'>
+                                <div data-aos="zoom-in" className='rounded-[1.25rem] overflow-hidden w-1/2 h-fit mr-5 relative'>
                                     <div className="img-overlay">
                                         7-Day Happiness Guaranteed
                                     </div>
@@ -108,13 +108,13 @@ function Home() {
                                 </div>
                             </div>
                             <div className='flex items-start'>
-                                <div className='rounded-[1.25rem] overflow-hidden w-1/3 mr-5 max-h-[285px] relative'>
+                                <div data-aos="zoom-in" className='rounded-[1.25rem] overflow-hidden w-1/3 mr-5 max-h-[285px] relative'>
                                     <div className="img-overlay">
                                         Monthly House Cleaning
                                     </div>
                                     <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
                                 </div>
-                                <div className='rounded-[1.25rem] overflow-hidden w-2/3 h-fit max-h-[356px] flex items-center relative'>
+                                <div data-aos="zoom-in" className='rounded-[1.25rem] overflow-hidden w-2/3 h-fit max-h-[356px] flex items-center relative'>
                                     <div className="img-overlay">
                                         Choose your own roomates
                                     </div>
@@ -123,15 +123,14 @@ function Home() {
                             </div>
                         </div>
                         <article className="w-full md:w-1/2 shrink-0 mb-12 md:mb-0 md:px-6 lg:px-12">
-                            <h2 className='text-2xl md:text-3xl lg:text-[2.5rem] leading-[135%] font-[800] mb-1'>Flexibility and options to suit your lifestyle.</h2>
-                            <p className='text-lg leading-8 mb-10'>You need it? We got it. We make finding your next home easy, comfortable, and simple. From our happiness guarantee to our selective roommate finder option. We provide you the flexibility that you most desire.</p>
-                            <button className="bg-orange rounded-[13px] text-white px-9 py-4 md:py-[22px] text-lg ">Search Rooms</button>
+                            <h2 data-aos="slide-up" className='text-2xl md:text-3xl lg:text-[2.5rem] leading-[140%] font-[800] mb-4'>Flexibility and options to suit your lifestyle.</h2>
+                            <p data-aos="fade-up" className='text-lg leading-8 mb-10'>You need it? We got it. We make finding your next home easy, comfortable, and simple. From our happiness guarantee to our selective roommate finder option. We provide you the flexibility that you most desire.</p>
+                            <button data-aos="zoom-in" className="bg-orange rounded-[13px] text-white px-9 py-4 md:py-[22px] text-lg ">Search Rooms</button>
                         </article>
                     </div>
 
-                    <div>
-                        <h2 className='font-medium text-xl md:text-[1.5rem] leading-8 text-black mb-9 text-center'>Your property with us and be Confident that Your Room will be Filled Out!</h2>
-                        <form className='py-[52px] shadow-8xl rounded-[10px] px-4 sm:px-8 md:px-12 lg:px-[63px]'>
+                        <h2 data-aos="fade-in" className='font-medium text-xl md:text-[1.5rem] leading-8 text-black mb-9 text-center'>Your property with us and be Confident that Your Room will be Filled Out!</h2>
+                        <form data-aos="fade-up" className='py-[52px] shadow-8xl rounded-[10px] px-4 sm:px-8 md:px-12 lg:px-[63px]'>
                             <h3 className='text-orange tracking-[0.1px] text-center leading-8 text-2xl md:text-[28px] font-poppin font-bold mb-8 md:mb-[66px]'>Add A New Property</h3>
                             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6'>
                                 <InputWrapper labelTitle="Name">
@@ -263,7 +262,6 @@ function Home() {
                             <button type='button' className='bg-orange py-5 text-white rounded-[10px] w-full sm:w-[60%] mx-auto block mt-12 md:mt-[80px]'>Add New Property</button>
                         </form>
                     </div>
-                </div>
             </section>
 
             <VideoSection />
