@@ -35,7 +35,7 @@
     @apply bg-orange text-white
   }
   .add-input{
-    @apply bg-[#f9f9f9] h-[50px] border border-[#E6E6E6] rounded-[5px] tracking-[0.2px] text-[#737373] text-sm leading-9 px-5 block w-full
+    @apply bg-[#f9f9f9] h-[50px] border border-[#E6E6E6] rounded-[5px] tracking-[0.2px] text-[#737373] text-sm leading-9 px-5 w-full focus:outline-0
   }
   .label-style{
     @apply block tracking-[0.2px] mb-[5px] leading-6 text-[17px] font-semibold font-poppin text-[#252B42]
@@ -73,9 +73,3 @@ textarea{
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}

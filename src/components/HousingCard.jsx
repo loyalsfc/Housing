@@ -3,8 +3,8 @@ import React from 'react'
 function HousingCard({title, type, cost, rooms, shower, size, url}) {
     return (
         <div className='overflow-hidden flex flex-col rounded-[26px] font-dm-sans bg-white border border-[#979797] hover:border-0 hover:shadow-7xl'>
-            <div className='h-[283p] shrink-0 w-full overflow-hidden'>
-                <img src={url} alt="" className='w-full min-h-full'/>
+            <div className='max-h-[283px] shrink-0 w-full overflow-hidden'>
+                <img src={url} alt="" className='w-full min-h-full hover:scale-125 transition-all'/>
             </div>
             <div className='pt-[18px] h-full flex border flex-col  '>
                 <h3 className='px-5 lg:px-9 font-bold text-xl md:text-[23px] text-black -tracking-[0.642075px] mb-5'>{title}</h3>
